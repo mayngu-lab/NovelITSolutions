@@ -1,0 +1,224 @@
+:root {
+    --nav-color: white;
+    --nav-logo-color:rgb(255, 255, 255, 0.925);
+    --nav-barcolor: rgb(212, 128, 17);
+    --nav-transition: 0.5s;
+    --body-bgcolor: rgb(212, 128, 17);
+    --nav-trans-color: orange;
+    --nav-responsive-width: 40%;
+    --nav-bar-height: 8px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:var(--body-bgcolor);
+}
+
+/************** MENU *****************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  padding: 10px;
+  min-height: 8vh;
+  color: var(--nav-color);
+  background-color:var(--nav-barcolor);
+  text-transform: uppercase;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: var(--nav-logo-color);
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-around;
+  list-style:none;
+  width: 55%
+}
+
+.nav-ul-li a, a:visited {
+  position: relative;
+  color: var(--nav-color);
+  text-decoration: none; 
+  transition: color var(--nav-transition);  
+}
+
+.nav-ul-li a::after {
+  position: absolute;
+  content:"";
+  width: 100%;
+  bottom: -8px;
+  height: 3px;
+  left: 0px;  
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--nav-transition);  
+  background-color: var(--nav-trans-color);
+}
+
+.nav-ul-li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-ul-li a:hover {
+  color: var(--nav-trans-color);
+}
+
+.nav-burger {
+  display: none;
+  font-size: xx-large;
+}
+.nav-burger a.icon {
+  color: var(--nav-color);
+}
+
+@media screen and (max-width:768px) {
+  .nav-burger {
+    display: block;    
+  }
+  .nav-ul {
+    display: none; 
+  }
+  .nav-ul.responsive {
+    display: block; 
+    position: absolute;
+    top: 8vh;   
+    right: 0px;
+    text-align: left;
+    z-index: 1;
+    overflow: visible;
+    background-color: var(--nav-barcolor);
+    opacity: 90%;
+    width: var(--nav-responsive-width);
+    padding: 5px;
+  }
+
+  .nav-ul.responsive li {
+    padding: 8px;
+  }
+
+  .nav-burger.responsive a.icon  {
+    color: lightgray;
+  }
+}
+
+/******************************************* SLIDE ****************************/
+img {
+   width: 100%;   
+   max-height: 500px; 
+}
+
+
+.videoInsert {
+    width: 100%;
+    max-height: 500px; 
+    object-fit: fill;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+/* Caption text */
+.slide-description {
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+  color: orange;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*************************************** Contact ****************************************/
+.contact-container {
+  display: flex;
+}
