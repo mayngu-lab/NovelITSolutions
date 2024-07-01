@@ -114,7 +114,14 @@ nav {
 }
 
 /******************************************* SLIDE ****************************/
+multi-img {
+  display: flex;
+}
+
 img {
+  flex: 1;
+  padding: 10px; /* Optional padding for spacing */
+  border: 1px solid #ccc; /* Optional border for visualization */
    width: 100%;   
    max-height: 500px; 
 }
@@ -130,6 +137,42 @@ img {
 .slideshow-container {
   position: relative;
   margin: auto;
+}
+
+.slide-content {
+  position: relative;
+  max-width: 80%;
+  text-align: left;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.h3header
+{
+  color: rgb(214, 211, 211);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.h3body
+{
+  color: rgb(214, 211, 211);
+  padding-bottom: 20px;
+}
+
+.slide-content .text {
+    flex: 1;
+    color: white;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.slide-content .image {
+    flex: 1;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 /* Hide the images by default */

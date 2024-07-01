@@ -11,7 +11,7 @@
         <nav>
             <div class="logo">
                 <h4>Novel IT Solutions</h4>
-                <p style="font-size: 50%;">Simple Solutions for Oil & Gas Company</p>
+                <p style="font-size: 50%;">Simple IT Solutions for Small to Mid-Sized Company</p>
             </div>       
             <div  class="nav-burger" id="navburger">
                 <a href="javascript:void(0);" class="icon" onclick="activateNavBurger()">
@@ -23,13 +23,13 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li  class="nav-ul-li">
-                    <a href="#">Project</a>
+                    <a href="#" data-slide="2">Project</a>
                 </li>
                 <li  class="nav-ul-li">
-                    <a href="#" data-slide="2">Why Us</a>
+                    <a href="#" data-slide="3">Why Us</a>
                 </li>
                 <li  class="nav-ul-li">
-                    <a href="#" data-slide="3">Contact Us</a>
+                    <a href="#" data-slide="4">Contact Us</a>
                 </li>                    
             </ul>            
         </nav>
@@ -37,20 +37,63 @@
         <!-- Slideshow container -->
         <div class="slideshow-container">
             <div class="mySlides fade" >
-                <video class="videoInsert" controls  autoplay muted loop id="myVideo" 
+                <video class="videoInsert" controls  autoplay muted loop id="myVideo1" 
                         poster="images/home/1.jpg"> 
                         <source src="videos/NovelIT.mp4" type="video/mp4">               
                 </video>
             </div>
 
             <div class="mySlides fade">
-                <img src="images/home/2.jpg" >
-                <div class="slide-description"> <a href="https://www.google.ca" style="color: orange;"> Caption Two </a> </div>
+                <div class="slide-content">
+                    <div class="image">
+                        <img src="images/project/transformation.jpg" alt="Digital Transformation">
+                    </div>
+                </div>
+
+                <div class="slide-content">
+                    <div class="text">
+                        <h3 class="h3header">Convert Raw Data</h3>
+                        <p class = "h3body">Seamlessly transform raw data from various sources into organized, searchable formats
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="images/project/raw_data.jpg" alt="Raw Data">
+                    </div>
+                </div>
+
+                <div class="slide-content">
+                    <div class="text">
+                        <h3 class="h3header">Enable Viewing and Collaboration</h3>
+                        <p class = "h3body">Make data accessible and facilitate collaborative insights for all stakeholders
+                    
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="images/project/collaboration.jpg" alt="Collaboration">
+                    </div>
+                </div>
+                
+                <div class="slide-content">
+                    <div class="text">
+                        <h3 class="h3header">Generate Actionable Insights</h3>
+                        <p class = "h3body">Utilize advanced analytics to uncover actionable insights and strategic KPIs</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/project/viewable_insight.jpg" alt="Viewable Insights">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides fade" >
+                <video class="videoInsert" controls  autoplay muted loop id="myVideo2" 
+                        poster="images/home/2.jpg"> 
+                        <source src="videos/WhyUs.mp4" type="video/mp4">               
+                </video>
             </div>
 
             <div class="mySlides fade">
                 <img src="images/home/3.jpg" >
-                <div class="slide-description"> <a href="mailto:it@bbb.com" style="color: lightblue;" > email us: contact@novelitsolution.com </a> <br> <br> <br>
+                <div class="slide-description"> <a href="contact@novelitsolutions.com" style="color: lightblue;" > email us: contact@novelitsolutions.com </a> <br> <br> <br>
 						<a style="color: gray;"> Sip Back and Relax – Your IT Solution is Brewing </a> </div>
             </div>
 
@@ -65,9 +108,10 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
         </div>
             
-    <script src="js/testtheme.js"></script>
+    <script src="js/main.js"></script>
     <footer>
     </footer>
 
