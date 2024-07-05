@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 // slide navigation
 var slideIndex = 1;
 showSlides(slideIndex);
