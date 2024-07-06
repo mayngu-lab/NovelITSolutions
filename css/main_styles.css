@@ -1,9 +1,9 @@
 :root {
     --nav-color: white;
     --nav-logo-color:rgb(255, 255, 255, 0.925);
-    --nav-barcolor: rgb(212, 128, 17);
+    --nav-barcolor: rgb(138, 135, 132);
     --nav-transition: 0.5s;
-    --body-bgcolor: rgb(212, 128, 17);
+    --body-bgcolor: rgb(138, 135, 132);
     --nav-trans-color: orange;
     --nav-responsive-width: 40%;
     --nav-bar-height: 8px;
